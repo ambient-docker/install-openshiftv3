@@ -15,5 +15,5 @@
   register:  ip_pub 
 - name: copy and paste this message 
   debug: 
-    msg: "/usr/local/sbin/oc cluster up --public-hostname={{ ip_pub }} --host-data-dir=/home/centos/opens_data "
+    msg: " sudo /usr/local/sbin/oc cluster up --public-hostname={{ ip_pub.stdout }} --host-data-dir=/home/{{ lookup('env','USER') }}/opens_data "
 
