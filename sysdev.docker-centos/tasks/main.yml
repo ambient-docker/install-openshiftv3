@@ -19,7 +19,7 @@
   command:  yum-config-manager --enable docker-ce-test
   changed_when: false
 - name: Add docker package for openshift
-  yum: name=docker-ce-17.09.1.ce-1.el7.centos state=present update_cache=yes
+  yum: name=docker-ce state=present update_cache=yes
 - name: Change docker.service
   lineinfile: dest=/usr/lib/systemd/system/docker.service
      state=present
